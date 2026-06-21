@@ -1,0 +1,126 @@
+=== 商用QA（1回目(最終確認)）: v7.0  2026-06-21 11:02:29 UTC node v22.22.2 ===
+[T1] node --check
+  ✅ T1
+[T2] jsdom
+-- A) 同梱ライブラリ --
+  ✅ PptxGenJS
+  ✅ JSZip
+-- B) 生成→目次＋見開き --
+  ✅ 見開き表示(bookwrap=grid)
+  ✅ placeholder非表示
+  ✅ 目次に項目
+-- C) ページ1：左=企画 右=プレビュー --
+  ✅ 初期セクション=overview
+  ✅ 左に講義企画全体
+  ✅ 左に目的反映
+  ✅ 右にプレビュー
+-- D) セクション：受講生向け（左編集→右プレビュー）--
+  ✅ 左が編集textarea
+  ✅ 右にプレビューHTML(h1/h2)
+  ✅ 編集がSTATE反映
+  ✅ プレビューが編集に追従
+-- E) ヒント/解説の分割 --
+  ✅ ヒント生成
+  ✅ 解説生成
+  ✅ 目次にヒラ/解説
+-- F) 安全プレビュー(XSS) --
+  ✅ プレビューでscriptタグ無害化
+-- G) 保存・一括保存・復元 --
+  ✅ このタブ保存
+  ✅ 一括保存(複数キー)
+  ✅ 復元で時間割が戻る
+-- H) ひな形を現在タブに挿入 --
+  ✅ 現在タブにひな形挿入
+-- I) DL/全部入り/ZIP/ひな形DL --
+  ✅ downloadAs md Blob
+  ✅ downloadAs txt Blob
+  ✅ downloadAs csv Blob
+  ✅ downloadAs json Blob
+  ✅ 全部入りmd Blob
+  ✅ ひな形のみDL Blob
+  ✅ ひな形一式DL Blob
+  ✅ 全部入りはmd/codeのみ(overview混入なし)
+  ✅ zip組み立て
+-- J) ボタン自己チェック --
+  ✅ 全onclick実在
+-- K) セキュリティ --
+  ✅ eval不使用
+  ✅ Function不使用
+  ✅ CSVインジェクション対策
+  ✅ プレビューは先escape
+  ✅ 外部送信APIのみ
+-- L) AI壁打ち（全幅・モック）--
+  ✅ 壁打ちは全幅(page full)
+  ✅ AI応答
+
+=== jsdom結果: 38 passed / 0 failed ===
+[T3] pptx台本→実pptx
+  ✅ 台本構文OK
+✅ DNSの正引きと逆引き_受講生.pptx
+✅ DNSの正引きと逆引き_講師.pptx
+    173411 bytes  DNSの正引きと逆引き_受講生.pptx
+    98032 bytes  DNSの正引きと逆引き_講師.pptx
+[判定] T2 exit=0
+=== 商用QA（2回目(最終)）: v7.0  2026-06-21 11:02:35 UTC node v22.22.2 ===
+[T1] node --check
+  ✅ T1
+[T2] jsdom
+-- A) 同梱ライブラリ --
+  ✅ PptxGenJS
+  ✅ JSZip
+-- B) 生成→目次＋見開き --
+  ✅ 見開き表示(bookwrap=grid)
+  ✅ placeholder非表示
+  ✅ 目次に項目
+-- C) ページ1：左=企画 右=プレビュー --
+  ✅ 初期セクション=overview
+  ✅ 左に講義企画全体
+  ✅ 左に目的反映
+  ✅ 右にプレビュー
+-- D) セクション：受講生向け（左編集→右プレビュー）--
+  ✅ 左が編集textarea
+  ✅ 右にプレビューHTML(h1/h2)
+  ✅ 編集がSTATE反映
+  ✅ プレビューが編集に追従
+-- E) ヒント/解説の分割 --
+  ✅ ヒント生成
+  ✅ 解説生成
+  ✅ 目次にヒラ/解説
+-- F) 安全プレビュー(XSS) --
+  ✅ プレビューでscriptタグ無害化
+-- G) 保存・一括保存・復元 --
+  ✅ このタブ保存
+  ✅ 一括保存(複数キー)
+  ✅ 復元で時間割が戻る
+-- H) ひな形を現在タブに挿入 --
+  ✅ 現在タブにひな形挿入
+-- I) DL/全部入り/ZIP/ひな形DL --
+  ✅ downloadAs md Blob
+  ✅ downloadAs txt Blob
+  ✅ downloadAs csv Blob
+  ✅ downloadAs json Blob
+  ✅ 全部入りmd Blob
+  ✅ ひな形のみDL Blob
+  ✅ ひな形一式DL Blob
+  ✅ 全部入りはmd/codeのみ(overview混入なし)
+  ✅ zip組み立て
+-- J) ボタン自己チェック --
+  ✅ 全onclick実在
+-- K) セキュリティ --
+  ✅ eval不使用
+  ✅ Function不使用
+  ✅ CSVインジェクション対策
+  ✅ プレビューは先escape
+  ✅ 外部送信APIのみ
+-- L) AI壁打ち（全幅・モック）--
+  ✅ 壁打ちは全幅(page full)
+  ✅ AI応答
+
+=== jsdom結果: 38 passed / 0 failed ===
+[T3] pptx台本→実pptx
+  ✅ 台本構文OK
+✅ DNSの正引きと逆引き_受講生.pptx
+✅ DNSの正引きと逆引き_講師.pptx
+    173411 bytes  DNSの正引きと逆引き_受講生.pptx
+    98032 bytes  DNSの正引きと逆引き_講師.pptx
+[判定] T2 exit=0
